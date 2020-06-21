@@ -115,9 +115,6 @@ class UI{
 
     // show Alert in UI when user is not found
     showAlert(message, className){
-        // call clear Alert from UI
-        this.clearAlert();
-
         // alert div
         const div = document.createElement('div');
         // add alert classes
@@ -131,6 +128,9 @@ class UI{
         const search = document.querySelector('.search');
         // placed alert after parent but b4 search
         container.insertBefore(div, search);
+
+        // call clear Alert from UI
+        this.clearAlert();
     }
 
     // clear Profile
@@ -138,8 +138,6 @@ class UI{
         this.profile.innerHTML = '';
     }
 } 
-
-
 // end ui
 
 
